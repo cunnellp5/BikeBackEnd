@@ -5,13 +5,13 @@ var issues = require("../db/issues")
 
 /* GET users listing. */
 router.get("/bicyclist", (req, res, next) => {
-  user.getBicyclistByType(req.type).then(user => {
+  user.getAllBicyclistsByType(req.type).then(user => {
     res.json(user)
   })
 });
 
 router.get("/store", (req, res, next) => {
-  user.getStoreByType(req.type).then(user => {
+  user.getAllStoresByType(req.type).then(user => {
     res.json(user)
   })
 });
