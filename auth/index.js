@@ -5,7 +5,7 @@ const User = require('../db/user');
 
 router.get('/', (req, res) => {
   res.json({
-    message: 'poopy'
+    message: '🔐'
   });
 });
 
