@@ -12,11 +12,11 @@ router.get("/", (req, res, next) =>  {
   })
 })
 // add new user
-router.post("/", (req, res, next) =>  {
-    user.addNewUser(req.body).then(user  =>  {
-    res.json(req.body)
-  })
-})
+// router.post("/", (req, res, next) =>  {
+//     user.addNewUser(req.body).then(user  =>  {
+//     res.json(req.body)
+//   })
+// })
 /* GET bicyclists by type listing. */
 router.get("/bicyclist", (req, res, next) => {
   user.getAllBicyclistsByType(req.type).then(user => {

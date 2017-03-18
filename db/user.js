@@ -7,6 +7,11 @@ module.exports = {
     getOneByEmail: function(email)   {
         return knex("user").where("email", email).first();
     },
+    create: function(user) {
+      return knex('user').insert(user, 'id').then(ids => {
+        return ids[0];
+      })
+    },
     getAllBicyclistsByType: function(type){
         return knex('user').where('type', 1);
     },
