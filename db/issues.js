@@ -5,7 +5,7 @@ module.exports = {
       return knex("issues").where("user.id", id)
     },
     getAllIssues: function() {
-      return knex("issues")
+      return knex("issues").join("user", "user.id", "issues.issuer")
     },
     newIssue: function(issues) {
         return knex('issues').insert(issues)
