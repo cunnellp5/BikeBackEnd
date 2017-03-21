@@ -7,7 +7,7 @@ exports.up = function(knex, Promise) {
     table.text("phone").notNullable();
     table.boolean("isActive");
     table.text("location");
-    table.text("image").notNullable();
+    table.text("image");
     table.integer("type").notNullable();
     table.text("email");
   })
