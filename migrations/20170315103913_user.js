@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
     table.text("location");
     table.text("image");
     table.integer("type").notNullable();
-    table.text("email");
+    table.text("email").notNullable().unique();
   })
 };
 
