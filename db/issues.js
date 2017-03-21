@@ -10,7 +10,7 @@ module.exports = {
     newIssue: function(issues) {
         return knex('issues').insert(issues)
     },
-    delete: function(id){
-      return knex("issues").where("id", id).del()
+    delete: function(issuer){
+      return knex("issues").where("issuer", issuer).del()
     }
 }
