@@ -11,11 +11,11 @@ router.get("/", (req, res, next) =>  {
   })
 })
 // add new user
-// router.post("/", (req, res, next) =>  {
-//     user.addNewUser(req.body).then(user  =>  {
-//     res.json(req.body)
-//   })
-// })
+router.post("/", (req, res, next) =>  {
+    user.addNewUser(req.body).then(user  =>  {
+    res.json(req.body)
+  })
+})
 /* GET bicyclists by type listing. */
 router.get("/bicyclist", (req, res, next) => {
   user.getAllBicyclistsByType(req.type).then(user => {
@@ -52,6 +52,14 @@ router.get("/store/:id", (req, res, next) => {
 });
 
 router.delete('/bicyclist/:id', function(req, res){
+  console.log(req.params.id);
+  user.delete(req.params.id).then(id => {
+    res.json({
+      message: "nice, dood"
+    })
+  });
+});
+router.delete('/store/:id', function(req, res){
   console.log(req.params.id);
   user.delete(req.params.id).then(id => {
     res.json({
