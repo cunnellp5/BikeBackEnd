@@ -11,14 +11,14 @@ router.get('/', function(req, res, next) {
   authHelpers.ensureAuthenticated(req, res, next);
 });
 
-module.exports = router;
+// module.exports = router;
 
-// router.get("/", (req, res, next) =>  {
-//   issues.getAllIssues(req.body).then(issues  =>  {
-//     console.log(issues);
-//     res.json(issues)
-//   })
-// })
+router.get("/all", (req, res, next) =>  {
+  issues.getAllIssues(req.body).then(issues  =>  {
+    console.log(issues);
+    res.json(issues)
+  })
+})
 
 router.post("/", (req, res, next) =>  {
     issues.newIssue(req.body).then(issues  =>  {

@@ -6,9 +6,7 @@ var knex = require('../db/knex');
 var authHelpers = require('../auth/_helpers')
 var localAuth = require('../auth/local')
 
-
 router.post('/', (req, res, next) => {
-
   const email = req.body.email;
   const password = req.body.password;
   console.log(req.body.email);
