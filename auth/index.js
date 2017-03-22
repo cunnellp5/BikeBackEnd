@@ -33,7 +33,6 @@ router.post('/signup', (req, res, next) => {
               password: hash,
               firstName: req.body.firstName,
               phone: req.body.phone,
-              image: req.body.image,
               type: req.body.type
             };
 
@@ -73,9 +72,10 @@ router.post('/login', (req, res, next) => {
                     httpOnly: true,
                     secure: isSecure,
                     signed: true
-                  })
+                  });
                   res.json({
-                    message: "Logged in!"
+                    message: user.id,
+                    type: user.type
                   })
                 } else {
                   next(new Error("Invalid login"))
