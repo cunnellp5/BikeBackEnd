@@ -1,3 +1,5 @@
+var bcrypt = require('bcrypt');
+
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
   return knex('user').del()
@@ -8,7 +10,7 @@ exports.seed = function(knex, Promise) {
           id: 1,
           firstName: 'Philthy',
           lastName: 'Phil',
-          password: '123',
+          password: bcrypt.hashSync('123', 10),
           phone: '123-123-1234',
           isActive: false,
           location: 'Denver',
@@ -20,7 +22,7 @@ exports.seed = function(knex, Promise) {
           id: 2,
           firstName: 'Hot Wheels Bike Store',
           lastName: '',
-          password: '123',
+          password: bcrypt.hashSync('123', 10),
           phone: '123-123-1234',
           isActive: false,
           location: 'Denver',
