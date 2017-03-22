@@ -21,8 +21,8 @@ module.exports = {
     getAll: function()  {
         return knex('user');
     },
-    addNewUser: function(bicyclist) {
-        return knex('user').insert(bicyclist)
+    addNewUser: function(user) {
+        return knex('user').insert(user)
     },
     delete: function(id)  {
         // var updatedColumn = {
