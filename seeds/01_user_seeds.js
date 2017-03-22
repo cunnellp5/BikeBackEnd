@@ -13,7 +13,7 @@ exports.seed = function(knex, Promise) {
           password: bcrypt.hashSync('123', 10),
           phone: '123-123-1234',
           isActive: false,
-          location: 'Denver',
+
           image: 'https://media.licdn.com/media/AAEAAQAAAAAAAAg5AAAAJGI1YzY4NTg0LTAzNWQtNDdkNC1iMjMzLWFmNzdjMzY0YTJkZQ.jpg',
           type: 1,
           email: 'biketest@test.com'
@@ -25,7 +25,7 @@ exports.seed = function(knex, Promise) {
           password: bcrypt.hashSync('123', 10),
           phone: '123-123-1234',
           isActive: false,
-          location: 'Denver',
+
           image: 'http://www.thebikeshopauburn.com/images/The%20Bike%20Shop%20Storefront.jpg',
           type: 0,
           email: 'storetest@test.com'
